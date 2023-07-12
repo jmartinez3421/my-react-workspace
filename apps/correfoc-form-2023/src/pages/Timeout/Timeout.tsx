@@ -7,7 +7,7 @@ export const Timeout = () => {
 
     return (
         <div className={styles.container}>
-            <div>Estiguet atent a l'enllaç, aviat tindràs noticies nostres.</div>
+            <div>Estigues atent a l'enllaç, aviat tindràs noticies nostres.</div>
             <div className={styles.counter}>
                 <div><span>{days !== 1 ? "Dies" : "Dia"}</span><span>{days}</span></div>
                 <div><span>{hours !== 1 ? "Hores" : "Hora"}</span><span>{hours}</span></div>
