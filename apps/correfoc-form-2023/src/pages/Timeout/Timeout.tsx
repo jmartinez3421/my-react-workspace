@@ -3,7 +3,11 @@ import { useCountdown } from "@/hooks/useCountdown";
 import styles from "./Timeout.module.scss";
 
 export const Timeout = () => {
-    const [days, hours, minutes, seconds] = useCountdown("2023-08-12T21:00:00");
+    const { days, hours, minutes, seconds } = useCountdown("2023-08-12T21:00:00");
+
+    if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+        window.location.reload();
+    }
 
     return (
         <div className={styles.container}>
