@@ -1,9 +1,17 @@
+import React from "react";
 import { useCountdown } from "@/hooks/useCountdown";
 
 import styles from "./Timeout.module.scss";
+import { useWorldTime } from "@/api/Hooks";
 
 export const Timeout = () => {
-    const { days, hours, minutes, seconds } = useCountdown("2023-08-12T21:00:00");
+    const timeQuery = useWorldTime({
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+    });
+
+    const actualDate = React.useMemo<string>(() => timeQuery.data?.datetime ?? new Date().toJSON(), [timeQuery.data])
+
+    const { days, hours, minutes, seconds } = useCountdown(actualDate, "2023-08-12T21:00:00");
 
     if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
         window.location.reload();

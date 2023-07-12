@@ -13,7 +13,7 @@ const getReturnValues = (countDown: number) => {
     // calculate time left
     const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
-        (countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        (countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
     );
     const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
@@ -23,20 +23,26 @@ const getReturnValues = (countDown: number) => {
 
 /**
  * Returns a count-down that updates every second until the target date is reached. If the target date is in the past, it returns 0.
+ * @param actualDate
  * @param targetDate
  * @returns {days, hours, minutes, seconds}
  */
-export const useCountdown = (targetDate: string) => {
+export const useCountdown = (actualDate: string, targetDate: string) => {
     const countDownDate = new Date(targetDate).getTime();
+    let actualTime = new Date(actualDate).getTime();
 
     const [countDown, setCountDown] = React.useState(
-        countDownDate - new Date().getTime()
+        countDownDate - new Date(actualDate).getTime(),
     );
+
 
     React.useEffect(() => {
         // Update the count-down every 1 second
         const interval = setInterval(() => {
-            const newCountDown = countDownDate - new Date().getTime();
+            actualTime += 1000;
+            const newCountDown = countDownDate - actualTime;
+
+            // Update the states
             setCountDown(newCountDown <= 0 ? 0 : newCountDown);
 
             // If the count-down is finished, clear the interval

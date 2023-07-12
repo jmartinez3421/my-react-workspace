@@ -1,22 +1,20 @@
+import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { Home } from "@/pages/Home";
 import styles from "./App.module.scss";
-import { AppRouter } from "@/AppRouter";
-import { Timeout } from "@/pages/Timeout";
 
 function App() {
-    const actualTime = new Date().getTime();
-    const eventTime = new Date("2023-08-12T21:00:00").getTime();
+    const queryClient = new QueryClient();
 
     return (
-        <main>
-            <h1 className={ styles.title }>
-                Diables del Jordiet
-            </h1>
-            { actualTime < eventTime ? <Timeout /> : (
-                <div className={ styles.container }>
-                    <AppRouter />
-                </div>
-            )}
-        </main>
+        <QueryClientProvider client={queryClient}>
+            <main>
+                <h1 className={ styles.title }>
+                    Diables del Jordiet
+                </h1>
+                <Home />
+            </main>
+        </QueryClientProvider>
     );
 }
 
