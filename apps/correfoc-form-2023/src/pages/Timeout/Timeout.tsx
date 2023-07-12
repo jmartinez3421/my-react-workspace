@@ -3,7 +3,7 @@ import { useCountdown } from "@/hooks/useCountdown";
 import styles from "./Timeout.module.scss";
 
 export const Timeout = () => {
-    const [days, hours, minutes, seconds] = useCountdown("2023-08-12T21:00:00");
+    const { days, hours, minutes, seconds } = useCountdown("2023-08-12T21:00:00");
 
     return (
         <div className={styles.container}>
