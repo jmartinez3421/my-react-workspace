@@ -21,11 +21,11 @@ export const Form = () => {
         <div className={ styles.container }>
             <div className={ styles.title }>Elegeix el millor candidat </div>
             <div className={ styles.formContainer }>
-                <PercentageButton percentage={ percentages.number1 } onClick={ handleWrongClick } label="Amazon"
+                <PercentageButton percentage={ percentages.number1 } onClick={ handleWrongClick } label="Netflix"
                                   show={ hasClickedWrong || hasClicked } />
-                <PercentageButton percentage={ percentages.number2 } onClick={ handleWrongClick } label="Spotify"
+                <PercentageButton percentage={ percentages.number2 } onClick={ handleWrongClick } label="Instagram"
                                   show={ hasClickedWrong || hasClicked } />
-                <PercentageButton percentage={ percentages.number3 } onClick={ handleWrongClick } label="Facebook"
+                <PercentageButton percentage={ percentages.number3 } onClick={ handleWrongClick } label="Tinder"
                                   show={ hasClickedWrong || hasClicked } />
                 <PercentageButton percentage={ percentages.bigNumber } onClick={ handleCorrectClick } label="El Jordiet"
                                   show={ hasClickedWrong || hasClicked } winner />
