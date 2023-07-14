@@ -1,12 +1,10 @@
 import React from "react";
-import { useCountdown } from "@/hooks/useCountdown";
-
+import { getUserTimezone, useCountdown, useWorldTime } from "@jmartinez3421/utils-and-hooks";
 import styles from "./Timeout.module.scss";
-import { useWorldTime } from "@/api/Hooks";
 
 export const Timeout = () => {
     const timeQuery = useWorldTime({
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+        timezone: getUserTimezone(),
     });
 
     const actualDate = React.useMemo<string>(() => timeQuery.data?.datetime ?? new Date().toJSON(), [timeQuery.data])

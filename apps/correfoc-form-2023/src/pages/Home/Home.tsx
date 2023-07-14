@@ -1,12 +1,12 @@
 import React from "react";
-import { useWorldTime } from "@/api/Hooks";
+import { getUserTimezone, useWorldTime } from "@jmartinez3421/utils-and-hooks";
 import { Timeout } from "@/pages/Timeout";
 import { AppRouter } from "@/AppRouter";
 import styles from "./Home.module.scss";
 
 export const Home = () => {
     const timeQuery = useWorldTime({
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+        timezone: getUserTimezone(),
     });
 
     const actualDate = React.useMemo<string>(() => timeQuery.data?.datetime ?? new Date().toJSON(), [timeQuery.data])

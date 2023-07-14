@@ -1,21 +1,19 @@
 import React from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { UtilsAndHooksQueryClientProvider } from "@jmartinez3421/utils-and-hooks";
 import { Home } from "@/pages/Home";
 import styles from "./App.module.scss";
 
 function App() {
-    const queryClient = new QueryClient();
-
-    return (
-        <QueryClientProvider client={queryClient}>
-            <main>
-                <h1 className={ styles.title }>
-                    Diables del Jordiet
-                </h1>
-                <Home />
-            </main>
-        </QueryClientProvider>
-    );
+  return (
+    <UtilsAndHooksQueryClientProvider>
+      <main>
+        <h1 className={ styles.title }>
+          Diables del Jordiet
+        </h1>
+        <Home />
+      </main>
+    </UtilsAndHooksQueryClientProvider>
+  );
 }
 
 export default App;
