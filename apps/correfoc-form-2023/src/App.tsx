@@ -1,23 +1,19 @@
+import React from "react";
+import { UtilsAndHooksQueryClientProvider } from "@jmartinez3421/utils-and-hooks";
+import { Home } from "@/pages/Home";
 import styles from "./App.module.scss";
-import { AppRouter } from "@/AppRouter";
-import { Timeout } from "@/pages/Timeout";
 
 function App() {
-    const actualTime = new Date().getTime();
-    const eventTime = new Date("2023-08-12T21:00:00").getTime();
-
-    return (
-        <main>
-            <h1 className={ styles.title }>
-                Diables del Jordiet
-            </h1>
-            { actualTime < eventTime ? <Timeout /> : (
-                <div className={ styles.container }>
-                    <AppRouter />
-                </div>
-            )}
-        </main>
-    );
+  return (
+    <UtilsAndHooksQueryClientProvider>
+      <main>
+        <h1 className={ styles.title }>
+          Diables del Jordiet
+        </h1>
+        <Home />
+      </main>
+    </UtilsAndHooksQueryClientProvider>
+  );
 }
 
 export default App;
