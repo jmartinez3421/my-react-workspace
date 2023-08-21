@@ -1,14 +1,12 @@
-import { defineConfig, mergeConfig } from 'vitest/config'
-import viteConfig from './vite.config'
+import { defineProject } from 'vitest/config'
 
 // @ts-ignore
-export default mergeConfig(viteConfig, defineConfig({
+export default defineProject({
     test: {
         environment: "jsdom",
         globals: true,
         alias: {
             "@": "/src",
-            "$": "/public",
-        }
-    },
-}))
+        },
+    }
+})
