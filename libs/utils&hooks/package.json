@@ -1,8 +1,11 @@
 {
   "name": "@jmartinez3421/utils-and-hooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "private": false,
+  "repository": "https://github.com/jmartinez3421/my-react-workspace/tree/main/libs/utils%26hooks",
+  "author": "@jmartinez3421",
+  "bugs": "https://github.com/jmartinez3421/my-react-workspace/issues",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -42,10 +45,6 @@
     "vite": "^4.4.9",
     "vite-plugin-dts": "^3.2.0",
     "vitest": "0.33.0"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   "files": [
     "dist"
