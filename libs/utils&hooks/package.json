@@ -1,63 +1,66 @@
 {
-  "name": "@jmartinez3421/utils-and-hooks",
-  "version": "1.0.1",
-  "type": "module",
-  "private": false,
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "test": "vitest"
-  },
-  "dependencies": {
-    "@tanstack/react-query": "^4.29.19",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@babel/core": "7.22.9",
-    "@emotion/babel-plugin": "11.11.0",
-    "@emotion/eslint-plugin": "11.11.0",
-    "@testing-library/react": "14.0.0",
-    "@types/node": "^20.4.2",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "^4.0.3",
-    "eslint": "^8.44.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "prettier": "^3.0.0",
-    "sass": "^1.63.6",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.9",
-    "vite-plugin-dts": "^3.2.0",
-    "vitest": "0.33.0"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "dist/utils-and-hooks.umd.js",
-  "module": "dist/utils-and-hooks.es.js",
-  "types": "dist/utils-and-hooks.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/utils-and-hooks.es.js",
-      "require": "./dist/utils-and-hooks.umd.js",
-      "types": "./dist/utils-and-hooks.d.ts"
+    "name": "@jmartinez3421/utils-and-hooks",
+    "version": "1.0.3",
+    "type": "module",
+    "private": false,
+    "repository": "https://github.com/jmartinez3421/my-react-workspace/tree/main/libs/utils%26hooks",
+    "author": "@jmartinez3421",
+    "bugs": "https://github.com/jmartinez3421/my-react-workspace/issues",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview",
+        "test": "vitest"
+    },
+    "dependencies": {
+        "@tanstack/react-query": "^4.29.19",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@babel/core": "7.22.9",
+        "@emotion/babel-plugin": "11.11.0",
+        "@emotion/eslint-plugin": "11.11.0",
+        "@testing-library/react": "14.0.0",
+        "@types/node": "^20.4.2",
+        "@types/react": "^18.2.15",
+        "@types/react-dom": "^18.2.7",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "@vitejs/plugin-react": "^4.0.3",
+        "eslint": "^8.44.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-typescript": "^17.1.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-jsx-a11y": "^6.7.1",
+        "eslint-plugin-prettier": "^5.0.0",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.3",
+        "prettier": "^3.0.0",
+        "sass": "^1.63.6",
+        "typescript": "^5.1.6",
+        "vite": "^4.4.9",
+        "vite-plugin-dts": "^3.2.0",
+        "vitest": "0.33.0"
+    },
+    "peerDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
+    "files": [
+        "dist"
+    ],
+    "main": "dist/utils-and-hooks.umd.js",
+    "module": "dist/utils-and-hooks.es.js",
+    "types": "dist/utils-and-hooks.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/utils-and-hooks.es.js",
+            "require": "./dist/utils-and-hooks.umd.js",
+            "types": "./dist/utils-and-hooks.d.ts"
+        }
     }
-  }
 }
