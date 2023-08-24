@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { useCountdown } from "@jmartinez3421/utils-and-hooks";
 import styles from "./Counter.module.css";
+import useCountdown from "@/app/utils/hooks/useCountdown";
 
 export default function Counter() {
     const { days, hours, minutes, seconds } = useCountdown(new Date().toJSON(), "2024-08-17T21:00:00");
